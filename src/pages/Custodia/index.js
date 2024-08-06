@@ -11,12 +11,13 @@ const Custodia = () => {
     const [yearSearch, setYearSearch] = useState(new Date().getFullYear());
 
     useEffect(() => {
-        axios.get(`https://localhost:5001/api/income-tax/custodia/${yearSearch}`)
+        axios.get(`https://localhost:44397/api/income-tax/custodia/${yearSearch}`)
             .then(response => {
                 let dataSource = [];
                 response.data.map((item, index) =>
                     dataSource.push({
                         key: index,
+                        count: index + 1,
                         ...item
                     })
                 );

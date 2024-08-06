@@ -1,5 +1,10 @@
 export const columns = [
     {
+        title: 'Item',
+        dataIndex: 'count',
+        key: 'count'
+    },
+    {
         title: 'Categoria',
         dataIndex: 'categoria',
         key: 'categoria'

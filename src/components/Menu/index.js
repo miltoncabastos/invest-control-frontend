@@ -1,4 +1,4 @@
-import {Button, Menu } from "antd";
+import { Button, Menu } from "antd";
 import axios from "axios";
 
 const MenuPrincipal = () => {
@@ -18,7 +18,7 @@ const MenuPrincipal = () => {
     }
 
     const importarDados = () => {
-        axios.get(`https://localhost:5001/api/upload-informations/upload-data-manual`)
+        axios.get(`https://localhost:5001/api/upload-informations/upload-for-export-b3-negociacoes`)
             .then(response => {
 
                 console.log(response);
@@ -27,7 +27,7 @@ const MenuPrincipal = () => {
 
     return (
         <div>
-            <Menu onClick={onClick} mode="horizontal" items={items}/>
+            <Menu onClick={onClick} mode="horizontal" items={items} />
             <Button onClick={importarDados}>Importar Dados</Button>
         </div>
 
